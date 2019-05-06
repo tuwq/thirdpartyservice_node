@@ -1,0 +1,17 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.tuwq.mp.config.WxMpProperties",
+      "name": "wx.mp",
+      "type": "com.tuwq.mp.config.WxMpProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.tuwq.mp.config.WxMpProperties",
+      "name": "wx.mp.configs",
+      "type": "java.util.List<com.tuwq.mp.config.WxMpProperties.MpConfig>"
+    }
+  ]
+}
