@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<input id="avatarFile" type="file" />
+	<img id="imgShow" width="60" height="60" alt="" src=""/>
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	var avatarFileDOM = $('#avatarFile')
+	avatarFileDOM.on('change', ()=>{
+		var file = avatarFileDOM[0].files[0]
+		if(file == undefined){return}
+	    var freader = new FileReader();  
+        freader.readAsDataURL(file);  
+        freader.onload = function(e) {
+        	$('#imgShow').attr('src', e.target.result)
+        }
+
+		var formdata = new FormData()
+		formdata.append('avatar_file',file)
+		formdata.append('extra', 123)
+		$.ajax({
+			type: 'POST',
+			url: 'http://127.0.0.1:7000/avatar',
+			data: formdata,
+			contentType: false,
+			processData: false,
+			cache: false,
+			success: function(res) {
+				console.log(res)
+			}
+		})
+	})
+
+</script>
+</html>

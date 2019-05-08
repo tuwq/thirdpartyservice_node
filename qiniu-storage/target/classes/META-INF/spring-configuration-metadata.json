@@ -1,0 +1,17 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.tuwq.thesystemconfig.ThesystemProperties",
+      "name": "thesystem.config",
+      "type": "com.tuwq.thesystemconfig.ThesystemProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.tuwq.thesystemconfig.ThesystemProperties",
+      "name": "thesystem.config.qiniu",
+      "type": "com.tuwq.thesystemconfig.QiniuProperties"
+    }
+  ]
+}
