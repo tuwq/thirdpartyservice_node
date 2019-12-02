@@ -246,9 +246,9 @@ public class QueryController {
     @GetMapping("combination")
     public String combination() {
         // 组合查询就是把诸多查询条件用一定逻辑合并到一起（OR 或 AND）再交给云端去查询。
-        // 组合查询不支持在子查询中包含 GeoPoint 或其他非过滤性的限制（例如 near、withinGeoBox、limit、skip、ascending、descending、include）。
+        // 组合查询不支持在子查询中包含 GeoPointController 或其他非过滤性的限制（例如 near、withinGeoBox、limit、skip、ascending、descending、include）。
         // OR 查询
-        // 使用 OR 查询时，子查询中不能包含 GeoPoint 相关的查询。
+        // 使用 OR 查询时，子查询中不能包含 GeoPointController 相关的查询。
         final AVQuery<AVObject> priorityQuery = new AVQuery<>("Todo");
         priorityQuery.whereGreaterThanOrEqualTo("priority", 3);
         final AVQuery<AVObject> isCompleteQuery = new AVQuery<>("Todo");
