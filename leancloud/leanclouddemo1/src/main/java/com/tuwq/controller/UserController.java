@@ -355,6 +355,4 @@ public class UserController {
     public String otherSecurity() {
         return "success";
     }
-    
-
 }
