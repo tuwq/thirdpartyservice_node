@@ -1,0 +1,64 @@
+2019-12-04 14:47:55.834 [main] INFO  com.xcyy.App -Starting App on DESKTOP-09L5LEC with PID 3940 (E:\ideaSpace\mitu\target\classes started by tuwq in E:\ideaSpace\mitu)
+2019-12-04 14:47:55.837 [main] INFO  com.xcyy.App -No active profile set, falling back to default profiles: default
+2019-12-04 14:47:57.850 [main] INFO  c.a.d.p.DruidDataSource -{dataSource-1} inited
+2019-12-04 14:47:59.124 [main] INFO  com.xcyy.App -Started App in 3.643 seconds (JVM running for 5.035)
+2019-12-04 14:49:01.666 [http-nio-8000-exec-2] ERROR c.a.d.f.stat.StatFilter -slow sql 4 millis. 
+SELECT  
+    id, `name`, age
+   
+    FROM `users`
+[]
+2019-12-04 14:49:05.027 [http-nio-8000-exec-4] ERROR c.a.d.f.stat.StatFilter -slow sql 1 millis. 
+SELECT  
+    id, `name`, age
+   
+    FROM `users`
+[]
+2019-12-04 15:20:56.679 [main] INFO  com.xcyy.App -Starting App on DESKTOP-09L5LEC with PID 4200 (E:\ideaSpace\mitu\target\classes started by tuwq in E:\ideaSpace\mitu)
+2019-12-04 15:20:56.684 [main] INFO  com.xcyy.App -No active profile set, falling back to default profiles: default
+2019-12-04 15:20:58.614 [main] INFO  c.a.d.p.DruidDataSource -{dataSource-1} inited
+2019-12-04 15:21:00.110 [main] INFO  com.xcyy.App -Started App in 3.869 seconds (JVM running for 5.325)
+2019-12-04 15:22:38.142 [main] INFO  com.xcyy.App -Starting App on DESKTOP-09L5LEC with PID 12772 (E:\ideaSpace\mitu\target\classes started by tuwq in E:\ideaSpace\mitu)
+2019-12-04 15:22:38.147 [main] INFO  com.xcyy.App -No active profile set, falling back to default profiles: default
+2019-12-04 15:22:40.079 [main] INFO  c.a.d.p.DruidDataSource -{dataSource-1} inited
+2019-12-04 15:22:41.428 [main] INFO  com.xcyy.App -Started App in 3.714 seconds (JVM running for 5.3)
+2019-12-04 15:23:09.068 [http-nio-8000-exec-5] ERROR c.a.d.f.stat.StatFilter -slow sql 3 millis. 
+SELECT  
+    id, `name`, age
+   
+    FROM `users`
+[]
+2019-12-04 15:24:02.000 [http-nio-8000-exec-8] ERROR c.a.d.f.stat.StatFilter -slow sql 1 millis. 
+SELECT  
+    id, `name`, age
+   
+    FROM `users`
+[]
+2019-12-04 15:26:48.249 [main] INFO  com.xcyy.App -Starting App on DESKTOP-09L5LEC with PID 11356 (E:\ideaSpace\mitu\target\classes started by tuwq in E:\ideaSpace\mitu)
+2019-12-04 15:26:48.252 [main] INFO  com.xcyy.App -No active profile set, falling back to default profiles: default
+2019-12-04 15:26:50.008 [main] INFO  c.a.d.p.DruidDataSource -{dataSource-1} inited
+2019-12-04 15:26:51.452 [main] INFO  com.xcyy.App -Started App in 3.476 seconds (JVM running for 4.772)
+2019-12-04 15:27:00.646 [main] INFO  com.xcyy.App -Starting App on DESKTOP-09L5LEC with PID 6712 (E:\ideaSpace\mitu\target\classes started by tuwq in E:\ideaSpace\mitu)
+2019-12-04 15:27:00.651 [main] INFO  com.xcyy.App -No active profile set, falling back to default profiles: default
+2019-12-04 15:27:02.560 [main] INFO  c.a.d.p.DruidDataSource -{dataSource-1} inited
+2019-12-04 15:27:03.867 [main] INFO  com.xcyy.App -Started App in 3.558 seconds (JVM running for 4.893)
+2019-12-04 15:28:48.952 [main] INFO  com.xcyy.App -Starting App on DESKTOP-09L5LEC with PID 10780 (E:\ideaSpace\mitu\target\classes started by tuwq in E:\ideaSpace\mitu)
+2019-12-04 15:28:48.954 [main] INFO  com.xcyy.App -The following profiles are active: dev
+2019-12-04 15:28:50.799 [main] INFO  c.a.d.p.DruidDataSource -{dataSource-1} inited
+2019-12-04 15:28:51.969 [main] INFO  com.xcyy.App -Started App in 3.486 seconds (JVM running for 4.843)
+2019-12-04 15:29:05.275 [http-nio-8000-exec-3] ERROR c.a.d.f.stat.StatFilter -slow sql 5 millis. 
+SELECT  
+    id, `name`, age
+   
+    FROM `users`
+[]
+2019-12-04 15:29:06.712 [http-nio-8000-exec-2] ERROR c.a.d.f.stat.StatFilter -slow sql 1 millis. 
+SELECT  
+    id, `name`, age
+   
+    FROM `users`
+[]
+2019-12-04 15:30:21.408 [main] INFO  com.xcyy.App -Starting App on DESKTOP-09L5LEC with PID 11132 (E:\ideaSpace\mitu\target\classes started by tuwq in E:\ideaSpace\mitu)
+2019-12-04 15:30:21.411 [main] INFO  com.xcyy.App -The following profiles are active: dev
+2019-12-04 15:30:23.564 [main] INFO  c.a.d.p.DruidDataSource -{dataSource-1} inited
+2019-12-04 15:30:25.350 [main] INFO  com.xcyy.App -Started App in 4.286 seconds (JVM running for 5.608)
