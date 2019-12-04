@@ -7,10 +7,7 @@ import com.tuwq.param.registration.RegisterParam;
 import com.tuwq.service.RegistrationService;
 import com.tuwq.util.ValidatorUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("registration")
@@ -27,15 +24,20 @@ public class RegistrationController extends BaseController {
     }
 
     @PostMapping("register")
-    public JsonResult<Void> register(@RequestBody RegisterParam param) {
+    public JsonResult<String> register(@RequestBody RegisterParam param) {
         ValidatorUtil.check(param);
-        registrationService.register(param);
+        return registrationService.register(param);
+    }
+
+    @PostMapping("login")
+    public JsonResult<Void> login() {
         return this.success();
     }
 
-    @PostMapping("test")
+    @GetMapping("test")
     public JsonResult<Void> test() {
-        AVUser.requestLoginSmsCodeInBackground("+8613077959253").blockingSubscribe();
+        AVUser.requestLoginSmsCodeInBackground("+8615277998899").blockingSubscribe();
         return this.success();
     }
+
 }
