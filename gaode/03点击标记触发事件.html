@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=2ae15f5731a07b44ba8436bbcf186a85">
+    </script>
+</head>
+
+<body>
+    <div id="container"></div>
+    <style>
+        #container {
+            width: 300px;
+            height: 180px;
+        }
+    </style>
+    <script>
+        var map = new AMap.Map('container', {
+            resizeEnable: true,
+            center: [116.397428, 39.90923],
+            zoom: 13
+        });
+        var infoWindow = new AMap.InfoWindow({ //创建信息窗体
+            isCustom: true, //使用自定义窗体
+            content: '<div>信息窗体</div>', //信息窗体的内容可以是任意html片段
+            offset: new AMap.Pixel(16, -45)
+        });
+        var onMarkerClick = function (e) {
+            infoWindow.open(map, e.target.getPosition()); //打开信息窗体
+            //e.target就是被点击的Marker
+        }
+        var marker = new AMap.Marker({
+            position: [116.481181, 39.989792]
+        })
+        map.add(marker);
+        marker.on('click', onMarkerClick); //绑定click事件
+    </script>
+</body>
+
+</html>

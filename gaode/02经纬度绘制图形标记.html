@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=2ae15f5731a07b44ba8436bbcf186a85">
+    </script>
+</head>
+
+<body>
+    <div id="container"></div>
+    <style>
+        #container {
+            width: 300px;
+            height: 180px;
+        }
+    </style>
+    <script>
+        var map = new AMap.Map('container', {
+            resizeEnable: true,
+            center: [116.397428, 39.90923],
+            zoom: 13
+        });
+        var lineArr = [
+            [116.368904, 39.913423],
+            [116.382122, 39.901176],
+            [116.387271, 39.912501],
+            [116.398258, 39.904600]
+        ];
+        var polyline = new AMap.Polyline({
+            path: lineArr, //设置线覆盖物路径
+            strokeColor: "#3366FF", //线颜色
+            strokeWeight: 5, //线宽
+            strokeStyle: "solid", //线样式
+        });
+        map.add(polyline);
+    </script>
+</body>
+
+</html>
