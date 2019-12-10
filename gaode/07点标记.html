@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=2ae15f5731a07b44ba8436bbcf186a85">
+    </script>
+</head>
+
+<body>
+    <div id="container"></div>
+    <style>
+        #container {
+            width: 1000px;
+            height: 500px;
+        }
+    </style>
+    <script>
+        var map = new AMap.Map("container");
+        // 创建一个 Marker 实例：
+        var marker = new AMap.Marker({
+            position: new AMap.LngLat(116.39, 39.9), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+            title: '北京'
+        });
+
+        // 将创建的点标记添加到已有的地图实例：
+        map.add(marker);
+
+        // 移除已创建的 marker
+        // map.remove(marker);
+
+        // 多个点实例组成的数组
+        // var markerList = [marker1, marker2, marker3];
+
+        // map.add(markerList);
+
+        // 自定义图标
+        // var marker = new AMap.Marker({
+        //     position: new AMap.LngLat(116.39,39.9),
+        //     offset: new AMap.Pixel(-10, -10),
+        //     icon: '//vdata.amap.com/icons/b18/1/2.png', // 添加 Icon 图标 URL
+        //     title: '北京'
+        // });
+
+        // map.add(marker);
+
+        // 创建 AMap.Icon 实例：为创建的 Marker 指定 Icon 实例
+        // var icon = new AMap.Icon({
+        //     size: new AMap.Size(40, 50), // 图标尺寸
+        //     image: '//webapi.amap.com/theme/v1.3/images/newpc/way_btn2.png', // Icon的图像
+        //     imageOffset: new AMap.Pixel(0, -60), // 图像相对展示区域的偏移量，适于雪碧图等
+        //     imageSize: new AMap.Size(40, 50) // 根据所设置的大小拉伸或压缩图片
+        // });
+
+        // // 将 Icon 实例添加到 marker 上:
+        // var marker = new AMap.Marker({
+        //     position: new AMap.LngLat(116.405467, 39.907761),
+        //     offset: new AMap.Pixel(-10, -10),
+        //     icon: icon, // 添加 Icon 实例
+        //     title: '北京',
+        //     zoom: 13
+        // });
+
+        // map.add(marker);
+
+        // 或者向已创建好的 Marker 添加 Icon：
+        marker.setIcon(icon);
+    </script>
+</body>
+
+</html>

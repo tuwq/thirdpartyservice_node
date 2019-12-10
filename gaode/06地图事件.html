@@ -20,16 +20,17 @@
     </style>
     <script>
         var map = new AMap.Map("container");
-        var clickHandler = function (e) {
-            alert('您在[ ' + e.lnglat.getLng() + ',' + e.lnglat.getLat() + ' ]的位置点击了地图！');
-        };
-
-        // 绑定事件
-        map.on('click', clickHandler);
-        // 解绑事件
-        // map.off('click', clickHandler);
-        // 销毁地图，并清空地图容器
-        // map.destroy( );
+        map.on('click', function (ev) {
+            // 触发事件的对象
+            var target = ev.target;
+            // 触发事件的地理坐标，AMap.LngLat 类型
+            var lnglat = ev.lnglat;
+            // 触发事件的像素坐标，AMap.Pixel 类型
+            var pixel = ev.pixel;
+            // 触发事件类型
+            var type = ev.type;
+            console.log(target)
+        });
     </script>
 </body>
 

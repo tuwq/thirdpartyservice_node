@@ -14,6 +14,9 @@
     <div id="container"></div>
     <style>
         #container {
+            position: absolute;
+            left: 10%;
+            top: 10%;
             width: 1000px;
             height: 500px;
         }
@@ -23,13 +26,7 @@
         var clickHandler = function (e) {
             alert('您在[ ' + e.lnglat.getLng() + ',' + e.lnglat.getLat() + ' ]的位置点击了地图！');
         };
-
-        // 绑定事件
         map.on('click', clickHandler);
-        // 解绑事件
-        // map.off('click', clickHandler);
-        // 销毁地图，并清空地图容器
-        // map.destroy( );
     </script>
 </body>
 

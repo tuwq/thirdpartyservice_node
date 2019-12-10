@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=2ae15f5731a07b44ba8436bbcf186a85">
+    </script>
+</head>
+
+<body>
+    <div id="container"></div>
+    <style>
+        #container {
+            width: 1000px;
+            height: 500px;
+        }
+    </style>
+    <script>
+        var map = new AMap.Map("container");
+        // 创建一条折线覆盖物
+        var path = [
+            new AMap.LngLat("116.368904", "39.913423"),
+            new AMap.LngLat("116.382122", "39.901176"),
+            new AMap.LngLat("116.387271", "39.912501"),
+            new AMap.LngLat("116.398258", "39.904600")
+        ];
+        var polyline = new AMap.Polyline({
+            path: path,
+            borderWeight: 2, // 线条宽度，默认为 1
+            strokeColor: 'red', // 线条颜色
+            lineJoin: 'round' // 折线拐点连接处样式
+        });
+        map.add(polyline)
+
+        // 创建两个点标记
+        var marker1 = new AMap.Marker({
+            position: new AMap.LngLat(117.39,
+                39.9), // 经纬度对象，如 new AMap.LngLat(116.39, 39.9); 也可以是经纬度构成的一维数组[116.39, 39.9]
+            title: '北京'
+        });
+        var marker2 = new AMap.Marker({
+            position: new AMap.LngLat(118.39,
+                39.9), // 经纬度对象，如 new AMap.LngLat(116.39, 39.9); 也可以是经纬度构成的一维数组[116.39, 39.9]
+            title: '北京'
+        });
+        map.add(marker1);
+        map.add(marker2);
+
+        // 自动适配到合适视野范围
+        // 无参数，默认包括所有覆盖物的情况
+        map.setFitView();
+        // 传入覆盖物数组，仅包括polyline和marker1的情况
+        map.setFitView([polyline, marker1]);
+    </script>
+</body>
+
+</html>
